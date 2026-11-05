@@ -200,7 +200,7 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
                     className="inline-flex items-center gap-1.5 sm:gap-2 px-3.5 sm:px-4 py-2 rounded-xl bg-cyan text-bg-primary text-xs font-mono font-semibold hover:bg-cyan-bright transition-colors"
                   >
                     <ExternalLink className="w-4 h-4" />
-                    <span>Live Service / Preview</span>
+                    <span>Live Preview</span>
                   </a>
                 )}
               </div>

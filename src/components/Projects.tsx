@@ -6,7 +6,10 @@ import { ProjectModal } from './ProjectModal'
 import { Project } from '../types/portfolio'
 
 export const Projects: React.FC = () => {
-  const featuredProjects = projectsData.filter((p) => p.id === 'facetcher' || p.id === 'doit-todolist')
+  const featuredProjects = [
+    projectsData.find((p) => p.id === 'doit-todolist')!,
+    projectsData.find((p) => p.id === 'facetcher')!,
+  ].filter(Boolean)
   const [selectedProject, setSelectedProject] = useState<Project | null>(null)
 
   return (
@@ -129,10 +132,10 @@ export const Projects: React.FC = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                       className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl border border-cyan/30 bg-cyan/10 font-mono text-xs text-cyan-bright hover:bg-cyan/20 transition-all"
-                      aria-label={`${project.title} Live Service`}
+                      aria-label={`${project.title} Live Application Preview`}
                     >
                       <ExternalLink className="w-3.5 h-3.5" />
-                      <span>Live API</span>
+                      <span>Live Preview</span>
                     </a>
                   )}
                 </div>
