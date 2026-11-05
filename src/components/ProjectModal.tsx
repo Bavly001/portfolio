@@ -26,12 +26,13 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
 
   if (typeof document === 'undefined') return null
 
-  const architectureFlow = [
+  const defaultArchitectureFlow = [
     { step: '01', title: 'Input Sketch', desc: 'Hand-drawn / digital strokes on HTML5 canvas' },
     { step: '02', title: 'Generator GAN', desc: 'Deep feature synthesis & latent encoding' },
     { step: '03', title: 'Discriminator', desc: 'Photorealistic adversarial loss feedback' },
     { step: '04', title: 'Real Portrait', desc: 'High-res realistic render with feature controls' },
   ]
+  const currentFlow = project?.architectureFlow || defaultArchitectureFlow
 
   const modalContent = (
     <AnimatePresence>
@@ -106,24 +107,24 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
               </p>
             </div>
 
-            {/* Reconstruction Neural Pipeline Schematic */}
+            {/* Reconstruction / Architecture Schematic */}
             <div className="mt-5 sm:mt-6 p-3.5 sm:p-5 rounded-2xl border border-white/10 bg-bg-surface/80">
               <div className="text-[10px] sm:text-[11px] font-mono uppercase tracking-widest text-text-dim mb-3 flex items-center justify-between">
                 <div className="flex items-center gap-2">
                   <span className="w-1.5 h-1.5 rounded-full bg-cyan inline-block"></span>
-                  <span className="text-cyan-bright font-medium">Reconstruction Neural Flow</span>
+                  <span className="text-cyan-bright font-medium">{project.pipelineTitle || 'Architecture Flow'}</span>
                 </div>
-                <span className="text-[10px] text-text-dim">End-to-End Pipeline</span>
+                <span className="text-[10px] text-text-dim">{project.pipelineSubtitle || 'End-to-End Pipeline'}</span>
               </div>
               <div className="grid grid-cols-1 sm:grid-cols-4 gap-2 sm:gap-2.5">
-                {architectureFlow.map((item, idx) => (
+                {currentFlow.map((item, idx) => (
                   <div
                     key={item.step}
                     className="p-2.5 sm:p-3 rounded-xl border border-white/5 bg-bg-card/90 flex flex-col justify-between relative group hover:border-cyan/40 transition-colors"
                   >
                     <div className="flex items-center justify-between mb-1">
                       <span className="font-mono text-[10px] text-cyan font-bold">{item.step}</span>
-                      {idx < 3 && <ArrowRight className="w-3 h-3 text-text-dim sm:inline hidden" />}
+                      {idx < currentFlow.length - 1 && <ArrowRight className="w-3 h-3 text-text-dim sm:inline hidden" />}
                     </div>
                     <div className="text-xs font-semibold text-text-primary">{item.title}</div>
                     <div className="text-[10px] sm:text-[11px] text-text-dim font-light mt-0.5 leading-snug">{item.desc}</div>
@@ -177,7 +178,18 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
                     className="inline-flex items-center gap-1.5 sm:gap-2 px-3.5 sm:px-4 py-2 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-xs font-mono text-text-primary hover:text-cyan transition-colors"
                   >
                     <Github className="w-4 h-4" />
-                    <span>View Repository</span>
+                    <span>{project.githubBackendUrl ? 'Frontend Code' : 'View Repository'}</span>
+                  </a>
+                )}
+                {project.githubBackendUrl && (
+                  <a
+                    href={project.githubBackendUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1.5 sm:gap-2 px-3.5 sm:px-4 py-2 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-xs font-mono text-text-primary hover:text-cyan transition-colors"
+                  >
+                    <Github className="w-4 h-4" />
+                    <span>Backend Code</span>
                   </a>
                 )}
                 {project.liveUrl && (
@@ -188,7 +200,7 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
                     className="inline-flex items-center gap-1.5 sm:gap-2 px-3.5 sm:px-4 py-2 rounded-xl bg-cyan text-bg-primary text-xs font-mono font-semibold hover:bg-cyan-bright transition-colors"
                   >
                     <ExternalLink className="w-4 h-4" />
-                    <span>Live Preview</span>
+                    <span>Live Service / Preview</span>
                   </a>
                 )}
               </div>

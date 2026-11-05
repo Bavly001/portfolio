@@ -116,6 +116,7 @@ export const projectsData: Project[] = [
     title: "Facetcher — AI Sketch-to-Realism Web Platform",
     tagline: "Graduation Project: AI deep-learning engine rendering hand-drawn sketches into photorealistic faces.",
     category: "AI Platform",
+    badgeText: "Graduation Project • AI Deep Learning",
     featured: true,
     description: "Served as Frontend Lead architecting an interactive sketch canvas, instant rendering engine, and RESTful API communication with machine learning inference backends.",
     longDescription: "Facetcher enables users to draw human facial features interactively on a responsive HTML5/React canvas and synthesizes high-fidelity photographic portraits in real time using deep neural networks. Built modular state synchronization and optimized image transfer pipelines.",
@@ -127,7 +128,47 @@ export const projectsData: Project[] = [
     ],
     technologies: ["React.js", "TypeScript", "Canvas API", "RESTful APIs", "State Management", "Tailwind CSS"],
     metrics: "Graduated with Honors (3.75 GPA) • Led Frontend Architecture",
-    githubUrl: "https://github.com/Bavly001"
+    githubUrl: "https://github.com/Bavly001",
+    pipelineTitle: "Reconstruction Neural Flow",
+    pipelineSubtitle: "End-to-End Pipeline",
+    architectureFlow: [
+      { step: "01", title: "Input Sketch", desc: "Hand-drawn / digital strokes on HTML5 canvas" },
+      { step: "02", title: "Generator GAN", desc: "Deep feature synthesis & latent encoding" },
+      { step: "03", title: "Discriminator", desc: "Photorealistic adversarial loss feedback" },
+      { step: "04", title: "Real Portrait", desc: "High-res realistic render with feature controls" },
+    ]
+  },
+  {
+    id: "doit-todolist",
+    title: "Doit — Full-Stack Productivity & Task Platform",
+    tagline: "Modern production-grade task management system with React 18, Express 4 REST API, and TiDB Cloud Serverless MySQL.",
+    category: "Full-Stack Platform",
+    badgeText: "Full-Stack Web App • React 18 & Node.js",
+    featured: true,
+    description: "Architected and delivered an end-to-end productivity web platform featuring decoupled SPA architecture, JWT authentication with bcrypt hashing, multi-tenant relational persistence, and TiDB Cloud Serverless integration.",
+    longDescription: "Doit is an enterprise-grade full-stack task and project management suite engineered for real-world productivity. The frontend leverages React 18, TypeScript, Tailwind CSS, Redux Toolkit, and TanStack Query for optimistic updates and zero-latency caching. The backend is powered by a high-throughput Express 4 REST API connected to TiDB Cloud Serverless MySQL via SSL/TLS 1.2 connection pools, complete with auto-reconnecting resilience and comprehensive Docker containerization.",
+    features: [
+      "Decoupled Full-Stack Architecture: React 18 SPA communicating with modular Express REST API",
+      "Robust Cloud Database: MySQL 8 protocol on TiDB Cloud Serverless with TLS transport encryption & connection pooling",
+      "Enterprise Authentication: Secure JWT bearer tokens (HS256) with bcrypt password hashing (10 rounds) & route guards",
+      "Advanced State Management: Redux Toolkit for auth and theme persistence alongside TanStack Query for cache invalidation",
+      "Smart Task Views & Scheduling: Today, Upcoming, Inbox, and custom Project categorization with real-time counters",
+      "Dynamic Personalization: Full Light/Dark mode and 8 customizable accent color palettes persisted across sessions",
+      "Production Containerization: Multi-stage Docker & docker-compose orchestration for reproducible local and cloud builds"
+    ],
+    technologies: ["React 18", "TypeScript", "Express.js", "Node.js", "MySQL (TiDB Cloud)", "Redux Toolkit", "TanStack Query", "Docker", "Tailwind CSS", "JWT / bcrypt"],
+    metrics: "Production Deployed • Render + TiDB Cloud + Cloudflare",
+    githubUrl: "https://github.com/Bavly001/todo-list-app",
+    githubBackendUrl: "https://github.com/Bavly001/todo-list-app-BE",
+    liveUrl: "https://todo-list-app-be-1kbj.onrender.com",
+    pipelineTitle: "Full-Stack Architecture Flow",
+    pipelineSubtitle: "Client to Cloud Database",
+    architectureFlow: [
+      { step: "01", title: "React 18 SPA", desc: "Type-safe UI with Redux Toolkit, TanStack Query & Tailwind" },
+      { step: "02", title: "Express REST API", desc: "Modular route handlers, CORS, JSON parsing & error boundaries" },
+      { step: "03", title: "JWT & Security", desc: "HMAC SHA-256 tokens, bcrypt password hashing & protected routes" },
+      { step: "04", title: "TiDB Cloud MySQL", desc: "Serverless relational DB with TLS 1.2 connection pooling" },
+    ]
   },
   {
     id: "dexi-suite",

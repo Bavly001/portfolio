@@ -15,19 +15,30 @@ export interface Experience {
   skills: string[]
 }
 
+export interface ArchitectureStep {
+  step: string
+  title: string
+  desc: string
+}
+
 export interface Project {
   id: string
   title: string
   tagline: string
-  category: 'AI Platform' | 'Healthtech & Clinic' | 'Fintech & E-Commerce' | 'Gaming & Esports' | 'Enterprise Portal'
+  category: 'AI Platform' | 'Healthtech & Clinic' | 'Fintech & E-Commerce' | 'Gaming & Esports' | 'Enterprise Portal' | 'Full-Stack Platform' | string
+  badgeText?: string
   description: string
   longDescription?: string
   features: string[]
   technologies: string[]
   metrics?: string
   githubUrl?: string
+  githubBackendUrl?: string
   liveUrl?: string
   featured: boolean
+  architectureFlow?: ArchitectureStep[]
+  pipelineTitle?: string
+  pipelineSubtitle?: string
 }
 
 export interface SkillItem {
