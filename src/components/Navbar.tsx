@@ -92,15 +92,15 @@ export const Navbar: React.FC = () => {
 
       {/* 2. FIXED FLOATING PILL NAVIGATION (STAYS FIXED WITH YOU AS YOU SCROLL) */}
       <div className="fixed top-4 sm:top-5 left-1/2 -translate-x-1/2 z-40 pointer-events-auto">
-        {/* Desktop floating pill with enhanced glassmorphism */}
-        <nav className="hidden md:flex items-center gap-1 p-1.5 rounded-full border border-white/[0.12] bg-[#070a13]/40 backdrop-blur-2xl shadow-[0_12px_40px_rgba(0,0,0,0.7),inset_0_1px_1px_rgba(255,255,255,0.1)]">
+        {/* Desktop floating pill with enhanced glassmorphism (activates at >=860px to prevent collision with social icons) */}
+        <nav className="hidden min-[860px]:flex items-center gap-0.5 sm:gap-1 p-1.5 rounded-full border border-white/[0.12] bg-[#070a13]/40 backdrop-blur-2xl shadow-[0_12px_40px_rgba(0,0,0,0.7),inset_0_1px_1px_rgba(255,255,255,0.1)]">
           {navLinks.map((link) => {
             const isActive = activeSection === link.id
             return (
               <a
                 key={link.label}
                 href={link.href}
-                className={`relative px-4 py-1.5 rounded-full font-mono text-xs tracking-wider transition-colors duration-200 ${
+                className={`relative px-3 min-[960px]:px-4 py-1.5 rounded-full font-mono text-xs tracking-wider transition-colors duration-200 ${
                   isActive
                     ? 'text-cyan-bright font-semibold'
                     : 'text-slate-300 hover:text-white'
@@ -119,8 +119,8 @@ export const Navbar: React.FC = () => {
           })}
         </nav>
 
-        {/* Mobile floating pill menu trigger with enhanced glassmorphism */}
-        <div className="md:hidden flex items-center gap-2.5 px-3.5 py-1.5 rounded-full border border-white/[0.12] bg-[#070a13]/45 backdrop-blur-2xl shadow-2xl shadow-black/90">
+        {/* Mobile & Tablet floating pill menu trigger (<860px keeps full clearance for GitHub & LinkedIn) */}
+        <div className="min-[860px]:hidden flex items-center gap-2.5 px-3.5 py-1.5 rounded-full border border-white/[0.12] bg-[#070a13]/45 backdrop-blur-2xl shadow-2xl shadow-black/90">
           <span className="relative flex h-1.5 w-1.5">
             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan opacity-75"></span>
             <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-cyan"></span>
@@ -146,7 +146,7 @@ export const Navbar: React.FC = () => {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: -10, scale: 0.95 }}
             transition={{ duration: 0.2 }}
-            className="fixed inset-x-4 top-16 z-50 bg-[#070a13]/70 backdrop-blur-2xl border border-white/15 rounded-3xl p-5 shadow-2xl shadow-black/95 md:hidden max-w-sm mx-auto"
+            className="fixed inset-x-4 top-16 z-50 bg-[#070a13]/70 backdrop-blur-2xl border border-white/15 rounded-3xl p-5 shadow-2xl shadow-black/95 min-[860px]:hidden max-w-sm mx-auto"
           >
             <div className="flex flex-col gap-1.5">
               {navLinks.map((link) => {
