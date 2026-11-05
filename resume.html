@@ -1,0 +1,349 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bavly Ashraf - Resume</title>
+  <style>
+    @page {
+      size: A4;
+      margin: 7mm 13mm 6mm 13mm;
+    }
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      color: #1f2937;
+      background-color: #ffffff;
+      line-height: 1.32;
+      font-size: 10pt;
+      -webkit-font-smoothing: antialiased;
+    }
+    a {
+      color: #111827;
+      text-decoration: underline;
+      text-underline-offset: 2.5px;
+    }
+
+    /* Header */
+    .header {
+      text-align: center;
+      margin-bottom: 9px;
+      padding-bottom: 7px;
+      border-bottom: 1.5px solid #1f2937;
+    }
+    .name {
+      font-size: 24pt;
+      font-weight: 700;
+      color: #111827;
+      letter-spacing: -0.2px;
+      line-height: 1.1;
+      margin-bottom: 2px;
+    }
+    .title {
+      font-size: 11pt;
+      font-weight: 600;
+      color: #374151;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+    .contact-line {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      white-space: nowrap;
+      font-size: 9.1pt;
+      color: #374151;
+      line-height: 1.2;
+    }
+    .contact-item {
+      display: inline-block;
+    }
+    .sep {
+      margin: 0 7px;
+      color: #9ca3af;
+      font-weight: 400;
+      user-select: none;
+    }
+
+    /* Sections */
+    .section {
+      margin-bottom: 7px;
+    }
+    .section:last-child {
+      margin-bottom: 0;
+    }
+    .section-title {
+      font-size: 10pt;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+      color: #111827;
+      border-bottom: 1.2px solid #374151;
+      padding-bottom: 2px;
+      margin-bottom: 4.5px;
+    }
+
+    /* Summary */
+    .summary-text {
+      font-size: 9.35pt;
+      color: #2b3544;
+      text-align: justify;
+      line-height: 1.32;
+    }
+    .summary-text strong {
+      font-weight: 600;
+      color: #111827;
+    }
+
+    /* Experience */
+    .exp-item {
+      margin-bottom: 5.5px;
+    }
+    .exp-item:last-child {
+      margin-bottom: 0;
+    }
+    .exp-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 1.5px;
+    }
+    .exp-role {
+      font-size: 10pt;
+      font-weight: 700;
+      color: #111827;
+    }
+    .exp-company {
+      font-weight: 600;
+      color: #1f2937;
+    }
+    .exp-date {
+      font-size: 9.2pt;
+      font-weight: 600;
+      color: #374151;
+      white-space: nowrap;
+    }
+    .exp-sub {
+      font-size: 8.9pt;
+      color: #4b5563;
+      margin-bottom: 2px;
+      font-style: italic;
+    }
+
+    /* Bullet Points */
+    ul.bullets {
+      list-style-type: disc;
+      padding-left: 17px;
+      margin-top: 1px;
+    }
+    ul.bullets li {
+      font-size: 9.25pt;
+      color: #2b3544;
+      line-height: 1.31;
+      margin-bottom: 1.2px;
+    }
+    ul.bullets li:last-child {
+      margin-bottom: 0;
+    }
+    ul.bullets li strong {
+      color: #111827;
+      font-weight: 600;
+    }
+
+    /* Skills Grid */
+    .skills-block {
+      display: flex;
+      flex-direction: column;
+      gap: 2.2px;
+      font-size: 9.25pt;
+    }
+    .skill-row {
+      display: flex;
+      line-height: 1.31;
+    }
+    .skill-label {
+      width: 158px;
+      font-weight: 600;
+      color: #111827;
+      flex-shrink: 0;
+    }
+    .skill-values {
+      color: #2b3544;
+      flex: 1;
+    }
+
+    /* Education & Project */
+    .edu-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 1.5px;
+    }
+    .edu-degree {
+      font-size: 9.8pt;
+      font-weight: 700;
+      color: #111827;
+    }
+    .edu-school {
+      font-weight: 600;
+      color: #1f2937;
+    }
+    .edu-date {
+      font-size: 9.2pt;
+      font-weight: 600;
+      color: #374151;
+    }
+    .project-line {
+      font-size: 9.3pt;
+      color: #2b3544;
+      line-height: 1.33;
+      margin-top: 1.5px;
+    }
+    .project-name {
+      font-weight: 600;
+      color: #111827;
+    }
+    .project-line strong {
+      font-weight: 600;
+      color: #111827;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <h1 class="name">Bavly Ashraf</h1>
+    <div class="title">Software Engineer</div>
+    <div class="contact-line">
+      <span class="contact-item">Cairo, Egypt</span>
+      <span class="sep">•</span>
+      <span class="contact-item"><a href="tel:+201271931937">+20 127 193 1937</a></span>
+      <span class="sep">•</span>
+      <span class="contact-item"><a href="mailto:a_bavly@yahoo.com">a_bavly@yahoo.com</a></span>
+      <span class="sep">•</span>
+      <span class="contact-item"><a href="https://www.linkedin.com/in/bavlyashraf/" target="_blank">linkedin.com/in/bavlyashraf</a></span>
+      <span class="sep">•</span>
+      <span class="contact-item"><a href="https://github.com/Bavly001" target="_blank">github.com/Bavly001</a></span>
+    </div>
+  </header>
+
+  <!-- Professional Summary -->
+  <section class="section">
+    <h2 class="section-title">Professional Summary</h2>
+    <p class="summary-text">
+      Product-minded Software Engineer with <strong>3+ years of professional experience</strong> designing and shipping high-performance, responsive web applications using <strong>React</strong>, <strong>TypeScript</strong>, and <strong>Next.js</strong>. Proven track record of developing scalable, reusable component architectures, integrating frontend clients with backend microservices and REST APIs, and implementing robust state management (Redux Toolkit) and API security. Dedicated to clean code, smooth, responsive UI performance across desktop, tablet, and mobile, and cross-functional team delivery.
+    </p>
+  </section>
+
+  <!-- Work Experience -->
+  <section class="section">
+    <h2 class="section-title">Work Experience</h2>
+
+    <!-- 1. Dexi (Current, First) -->
+    <div class="exp-item">
+      <div class="exp-header">
+        <span class="exp-role">Frontend Web Developer <span class="exp-company">— Dexi (Smart Dental Assistant)</span></span>
+        <span class="exp-date">Jul 2024 – Present</span>
+      </div>
+      <div class="exp-sub">
+        Cairo, Egypt (Remote) • Part-Time (Current since Jun 2025; Full-Time previously)
+      </div>
+      <ul class="bullets">
+        <li><strong>Automated Clinical Workflows:</strong> Architected and delivered core dental workflow automation features using modular React components and custom hooks—including intelligent task allocation and doctor-staff scheduling—eliminating manual paper logs and cutting administrative overhead.</li>
+        <li><strong>Real-Time Stock &amp; Inventory Management:</strong> Built an end-to-end medical supply tracking interface featuring live stock counts, FEFO batch monitoring, and automated low-stock alerts, preventing procedure delays across clinic operations.</li>
+        <li><strong>State, Security &amp; Error Handling:</strong> Centralized client-side state with Redux Toolkit and implemented frontend token/session management (JWT, RBAC), client-side schema validation (React Hook Form/Zod), and React Error Boundaries, eliminating re-renders and preventing data loss.</li>
+      </ul>
+    </div>
+
+    <!-- 2. PREEZY (Second) -->
+    <div class="exp-item">
+      <div class="exp-header">
+        <span class="exp-role">Frontend &amp; React Native Developer <span class="exp-company">— PREEZY (GamerG)</span></span>
+        <span class="exp-date">Jun 2025 – Jul 2026</span>
+      </div>
+      <div class="exp-sub">
+        Amman, Jordan (Remote)
+      </div>
+      <ul class="bullets">
+        <li><strong>High-Traffic Web Applications:</strong> Engineered responsive web applications with Next.js and TypeScript, building reusable, maintainable UI components for tournament brackets and live analytics, delivering sub-second load times across desktop, tablet, and mobile.</li>
+        <li><strong>Cross-Platform &amp; Design Systems:</strong> Spearheaded the frontend expansion into React Native (iOS &amp; Android), establishing shared design systems and state patterns that unified user experience across web and mobile ecosystems.</li>
+        <li><strong>Microservices &amp; Real-Time APIs:</strong> Integrated frontend clients with backend microservices via REST APIs and WebSockets, utilizing client-side caching, request interceptors, and secure token handling for smooth real-time responsiveness during live events.</li>
+      </ul>
+    </div>
+
+    <!-- 3. Exabyte LLC (Third) -->
+    <div class="exp-item">
+      <div class="exp-header">
+        <span class="exp-role">Frontend Web Developer <span class="exp-company">— Exabyte LLC</span></span>
+        <span class="exp-date">Mar 2024 – Jul 2024</span>
+      </div>
+      <div class="exp-sub">
+        Cairo, Egypt (On-site)
+      </div>
+      <ul class="bullets">
+        <li><strong>Health Insurance Dashboards:</strong> Developed operational React/TypeScript web portals for health insurance providers, building complex data forms with client-side validation and robust error handling for claims processing and policyholder management.</li>
+        <li><strong>E-Commerce &amp; Sales Analytics:</strong> Built responsive e-commerce storefronts and interactive sales monitoring dashboards with modular React components, giving merchant management real-time visibility into order lifecycles and revenue trends.</li>
+        <li><strong>Agile &amp; Cross-Functional Collaboration:</strong> Partnered closely with UX/UI designers, backend architects, QA, and DevOps teams within an Agile Scrum workflow; containerized frontend environments using Docker, followed clean Git branching standards, and assisted with CI/CD deployment checks.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Technical Skills -->
+  <section class="section">
+    <h2 class="section-title">Technical Skills</h2>
+    <div class="skills-block">
+      <div class="skill-row">
+        <span class="skill-label">Frontend &amp; Architecture:</span>
+        <span class="skill-values">React.js, TypeScript, JavaScript (ES6+), React Hooks, Component Lifecycle &amp; Architecture, Next.js, React Native</span>
+      </div>
+      <div class="skill-row">
+        <span class="skill-label">State &amp; Validation:</span>
+        <span class="skill-values">Redux / Redux Toolkit, Context API, Client-Side Validation (React Hook Form, Zod), React Error Boundaries</span>
+      </div>
+      <div class="skill-row">
+        <span class="skill-label">APIs, Security &amp; Backend:</span>
+        <span class="skill-values">REST APIs &amp; Microservices Integration, API Security, Token &amp; Session Management (JWT, OAuth2, RBAC), Node.js, SQL</span>
+      </div>
+      <div class="skill-row">
+        <span class="skill-label">UI, Tools &amp; DevOps:</span>
+        <span class="skill-values">Tailwind CSS, Material-UI, Responsive Design (Desktop, Tablet, Mobile), Git, Docker, Kubernetes, Vite, Webpack, Jira, Agile/Scrum</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Education & Academic Project -->
+  <section class="section">
+    <h2 class="section-title">Education &amp; Academic Project</h2>
+    <div class="edu-item">
+      <span class="edu-degree">Bachelor of Computer Science <span class="edu-school">— Future Academy</span></span>
+      <span class="edu-date">Graduated 2023 | GPA: 3.75 / 4.0 (Excellent with Honors)</span>
+    </div>
+    <div class="project-line">
+      <span class="project-name">Graduation Project — Facetcher:</span> AI deep-learning web platform translating hand-drawn facial sketches into photorealistic human faces. Served as Frontend Lead utilizing <strong>React</strong> to architect the interactive sketch canvas, instant rendering engine, and RESTful API communication with backend machine learning inference servers.
+    </div>
+  </section>
+
+  <!-- Certifications & Languages -->
+  <section class="section" style="margin-bottom: 0;">
+    <h2 class="section-title">Certifications &amp; Languages</h2>
+    <div class="skills-block">
+      <div class="skill-row">
+        <span class="skill-label">Certifications:</span>
+        <span class="skill-values">
+          <a href="https://www.udemy.com/certificate/UC-d3057c6e-85dd-4f2a-a896-b48b530ed36e/" target="_blank">React - The Complete Guide (incl. React Router &amp; Redux)</a> — Udemy (Dec 2023)
+        </span>
+      </div>
+      <div class="skill-row">
+        <span class="skill-label">Languages:</span>
+        <span class="skill-values">English (Professional Working Proficiency) • Arabic (Native)</span>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
