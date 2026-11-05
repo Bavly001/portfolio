@@ -1,34 +1,25 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="100%" height="100%">
   <defs>
-    <style>
-      @font-face {
-        font-family: 'Syne';
-        font-style: normal;
-        font-weight: 800 900;
-        src: url(data:font/woff2;base64,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) format('woff2');
-      }
-      .bg { fill: #070a13; }
-      .border { fill: none; stroke: rgba(255, 255, 255, 0.12); stroke-width: 2.5; }
-      .monogram {
-        font-family: 'Syne', sans-serif;
-        font-weight: 900;
-        font-size: 58px;
-        letter-spacing: 2px;
-        fill: #06b6d4;
-      }
-      .dot {
-        fill: #22d3ee;
-        filter: drop-shadow(0 0 6px rgba(34, 211, 238, 0.8));
-      }
-    </style>
+    <linearGradient id="cyanGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#22d3ee" />
+      <stop offset="100%" stop-color="#06b6d4" />
+    </linearGradient>
+    <filter id="beaconGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
   </defs>
-  <!-- Background Obsidian Squircle -->
-  <rect x="4" y="4" width="120" height="120" rx="36" class="bg"/>
-  <rect x="4" y="4" width="120" height="120" rx="36" class="border"/>
 
-  <!-- "BA" In Exact Syne Black Typography -->
-  <text x="18" y="82" class="monogram">BA</text>
+  <!-- Dark Obsidian Squircle matching site background #030508 / #070a13 -->
+  <rect x="3" y="3" width="122" height="122" rx="34" fill="#070a13" stroke="rgba(34, 211, 238, 0.3)" stroke-width="2" />
+  <rect x="5.5" y="5.5" width="117" height="117" rx="31.5" fill="none" stroke="rgba(255, 255, 255, 0.08)" stroke-width="1" />
 
-  <!-- Glowing Cyan Beacon -->
-  <circle cx="104" cy="74" r="6" class="dot"/>
+  <!-- Exact Syne 800/900 Vector Glyphs for BA -->
+  <path d="M38.26 77.08L8.34 77.08L8.34 48.92L36.06 48.92Q44.60 48.92 48.64 50.59Q52.69 52.26 52.69 56.40Q52.69 59.04 50.95 60.45Q49.22 61.86 45.98 62.41Q42.75 62.96 38.22 63.09L38.57 62.74Q41.87 62.74 44.68 62.91Q47.50 63.09 49.61 63.70Q51.72 64.32 52.91 65.60Q54.10 66.87 54.10 69.12Q54.10 71.84 52.16 73.60Q50.23 75.36 46.66 76.22Q43.10 77.08 38.26 77.08M19.34 65.11L19.34 68.81L38.26 68.81Q40.59 68.81 41.63 68.37Q42.66 67.93 42.66 66.96Q42.66 66.30 42.20 65.90Q41.74 65.51 40.77 65.31Q39.80 65.11 38.26 65.11L19.34 65.11M19.34 57.19L19.34 60.89L36.41 60.89Q38.74 60.89 39.78 60.45Q40.81 60.01 40.81 59.04Q40.81 58.03 39.78 57.61Q38.74 57.19 36.41 57.19 M95.55 72.81L65.46 72.81L65.46 66.21L95.55 66.21L95.55 72.81M67.70 77.08L55.60 77.08L74.48 48.92L86.71 48.92L105.76 77.08L93.66 77.08L77.34 51.87L83.89 51.87" fill="url(#cyanGrad)" />
+
+  <!-- Cyan Beacon Dot (vertically centered, matching navbar logo) -->
+  <circle cx="115.5" cy="63.0" r="4.2" fill="#22d3ee" filter="url(#beaconGlow)" />
 </svg>
