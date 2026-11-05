@@ -99,7 +99,7 @@ export const Hero: React.FC = () => {
           </a>
 
           <a
-            href="./Bavly-Ashraf-Resume.pdf"
+            href="./Bavly-Ashraf-Resume.pdf?v=2"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="View Resume"

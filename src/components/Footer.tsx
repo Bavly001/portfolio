@@ -41,7 +41,7 @@ export const Footer: React.FC = () => {
               Contact
             </a>
             <a
-              href="./Bavly-Ashraf-Resume.pdf"
+              href="./Bavly-Ashraf-Resume.pdf?v=2"
               target="_blank"
               rel="noopener noreferrer"
               className="text-cyan hover:text-cyan-bright transition-colors"

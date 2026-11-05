@@ -79,7 +79,7 @@ export const Navbar: React.FC = () => {
           </div>
 
           <a
-            href="./Bavly-Ashraf-Resume.pdf"
+            href="./Bavly-Ashraf-Resume.pdf?v=2"
             target="_blank"
             rel="noopener noreferrer"
             className="hidden min-[400px]:inline-flex items-center gap-1.5 px-3.5 sm:px-4 py-1.5 rounded-full border border-cyan/40 bg-cyan/[0.08] backdrop-blur-xl font-mono text-xs font-semibold text-cyan hover:border-cyan hover:bg-cyan/20 hover:shadow-[0_0_18px_rgba(6,182,212,0.35)] transition-all duration-300 shadow-lg shadow-black/80"
@@ -171,7 +171,7 @@ export const Navbar: React.FC = () => {
               })}
               <div className="pt-3 mt-2 border-t border-white/[0.08] flex items-center justify-between">
                 <a
-                  href="./Bavly-Ashraf-Resume.pdf"
+                  href="./Bavly-Ashraf-Resume.pdf?v=2"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full border border-cyan/40 font-mono text-xs font-medium text-cyan hover:bg-cyan/10 transition-all"

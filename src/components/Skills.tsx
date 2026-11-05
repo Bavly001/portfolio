@@ -130,7 +130,7 @@ export const Skills: React.FC = () => {
             </div>
           </div>
           <a
-            href="./Bavly-Ashraf-Resume.pdf"
+            href="./Bavly-Ashraf-Resume.pdf?v=2"
             target="_blank"
             rel="noopener noreferrer"
             className="shrink-0 px-4 py-2 rounded-xl bg-white/5 border border-white/10 hover:border-emerald-500/30 text-xs font-medium text-zinc-200 hover:text-white transition-all"
