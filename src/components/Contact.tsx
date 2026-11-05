@@ -47,8 +47,8 @@ export const Contact: React.FC<ContactProps> = ({ onNotify }) => {
   }
 
   return (
-    <section id="contact" className="relative z-10 py-24 border-t border-border-subtle">
-      <div className="mx-auto max-w-4xl px-6 text-center">
+    <section id="contact" className="relative z-10 py-20 sm:py-24 border-t border-border-subtle">
+      <div className="mx-auto max-w-4xl px-4 min-[360px]:px-6 text-center">
         {/* Section Heading */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -71,38 +71,38 @@ export const Contact: React.FC<ContactProps> = ({ onNotify }) => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.1 }}
-          className="mx-auto max-w-xl text-sm sm:text-base text-text-muted font-light mb-12"
+          className="mx-auto max-w-xl text-xs min-[360px]:text-sm sm:text-base text-text-muted font-light mb-10 sm:mb-12"
         >
           Currently available for Engineering Roles in Cairo, Egypt and Remote opportunities worldwide. Reach out directly through any of the channels below.
         </motion.p>
 
         {/* Contact Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-left max-w-2xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 text-left max-w-2xl mx-auto">
           {/* Email Card */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.4 }}
-            className="p-5 rounded-2xl border border-white/5 bg-bg-card flex items-center justify-between group hover:border-cyan/50 hover:shadow-lg hover:shadow-cyan/5 transition-all"
+            className="p-3.5 min-[360px]:p-5 rounded-2xl border border-white/5 bg-bg-card flex items-center justify-between group hover:border-cyan/50 hover:shadow-lg hover:shadow-cyan/5 transition-all"
           >
             <a
               href={`mailto:${profileData.email}`}
-              className="flex items-center gap-3 overflow-hidden"
+              className="flex items-center gap-2.5 sm:gap-3 overflow-hidden"
             >
-              <div className="p-2.5 rounded-xl border border-cyan/30 bg-bg-surface text-cyan shrink-0 group-hover:border-cyan group-hover:text-cyan-bright group-hover:shadow-[0_0_12px_rgba(6,182,212,0.3)] transition-colors duration-300">
+              <div className="p-2 sm:p-2.5 rounded-xl border border-cyan/30 bg-bg-surface text-cyan shrink-0 group-hover:border-cyan group-hover:text-cyan-bright group-hover:shadow-[0_0_12px_rgba(6,182,212,0.3)] transition-colors duration-300">
                 <Mail className="w-4 h-4" />
               </div>
               <div className="truncate">
-                <div className="text-[11px] font-mono text-cyan uppercase tracking-wider">Email</div>
-                <div className="text-sm font-semibold text-text-primary group-hover:text-cyan-bright transition-colors truncate">
+                <div className="text-[10px] sm:text-[11px] font-mono text-cyan uppercase tracking-wider">Email</div>
+                <div className="text-xs min-[360px]:text-sm font-semibold text-text-primary group-hover:text-cyan-bright transition-colors truncate">
                   {profileData.email}
                 </div>
               </div>
             </a>
             <button
               onClick={() => handleCopy(profileData.email, 'email')}
-              className="p-2 rounded-lg text-text-muted hover:text-cyan hover:bg-white/5 transition-colors ml-2"
+              className="p-1.5 sm:p-2 rounded-lg text-text-muted hover:text-cyan hover:bg-white/5 transition-colors ml-2 shrink-0"
               title="Copy email"
               aria-label="Copy email address"
             >
@@ -120,25 +120,25 @@ export const Contact: React.FC<ContactProps> = ({ onNotify }) => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.4, delay: 0.1 }}
-            className="p-5 rounded-2xl border border-white/5 bg-bg-card flex items-center justify-between group hover:border-cyan/50 hover:shadow-lg hover:shadow-cyan/5 transition-all"
+            className="p-3.5 min-[360px]:p-5 rounded-2xl border border-white/5 bg-bg-card flex items-center justify-between group hover:border-cyan/50 hover:shadow-lg hover:shadow-cyan/5 transition-all"
           >
             <a
               href={`tel:${profileData.phone.replace(/\s+/g, '')}`}
-              className="flex items-center gap-3 overflow-hidden"
+              className="flex items-center gap-2.5 sm:gap-3 overflow-hidden"
             >
-              <div className="p-2.5 rounded-xl border border-cyan/30 bg-bg-surface text-cyan shrink-0 group-hover:border-cyan group-hover:text-cyan-bright group-hover:shadow-[0_0_12px_rgba(6,182,212,0.3)] transition-colors duration-300">
+              <div className="p-2 sm:p-2.5 rounded-xl border border-cyan/30 bg-bg-surface text-cyan shrink-0 group-hover:border-cyan group-hover:text-cyan-bright group-hover:shadow-[0_0_12px_rgba(6,182,212,0.3)] transition-colors duration-300">
                 <Phone className="w-4 h-4" />
               </div>
               <div className="truncate">
-                <div className="text-[11px] font-mono text-cyan uppercase tracking-wider">Phone &amp; WhatsApp</div>
-                <div className="text-sm font-semibold text-text-primary group-hover:text-cyan-bright transition-colors truncate">
+                <div className="text-[10px] sm:text-[11px] font-mono text-cyan uppercase tracking-wider">Phone &amp; WhatsApp</div>
+                <div className="text-xs min-[360px]:text-sm font-semibold text-text-primary group-hover:text-cyan-bright transition-colors truncate">
                   {profileData.phone}
                 </div>
               </div>
             </a>
             <button
               onClick={() => handleCopy(profileData.phone, 'phone number')}
-              className="p-2 rounded-lg text-text-muted hover:text-cyan hover:bg-white/5 transition-colors ml-2"
+              className="p-1.5 sm:p-2 rounded-lg text-text-muted hover:text-cyan hover:bg-white/5 transition-colors ml-2 shrink-0"
               title="Copy phone"
               aria-label="Copy phone number"
             >
@@ -156,14 +156,14 @@ export const Contact: React.FC<ContactProps> = ({ onNotify }) => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.4, delay: 0.2 }}
-            className="p-5 rounded-2xl border border-white/5 bg-bg-card flex items-center gap-3"
+            className="p-3.5 min-[360px]:p-5 rounded-2xl border border-white/5 bg-bg-card flex items-center gap-2.5 sm:gap-3"
           >
-            <div className="p-2.5 rounded-xl border border-cyan/30 bg-bg-surface text-cyan shrink-0">
+            <div className="p-2 sm:p-2.5 rounded-xl border border-cyan/30 bg-bg-surface text-cyan shrink-0">
               <MapPin className="w-4 h-4" />
             </div>
             <div>
-              <div className="text-[11px] font-mono text-cyan uppercase tracking-wider">Location &amp; Work Model</div>
-              <div className="text-sm font-semibold text-text-primary">
+              <div className="text-[10px] sm:text-[11px] font-mono text-cyan uppercase tracking-wider">Location &amp; Work Model</div>
+              <div className="text-xs min-[360px]:text-sm font-semibold text-text-primary">
                 Cairo, Egypt • Open to Remote
               </div>
             </div>
@@ -175,13 +175,13 @@ export const Contact: React.FC<ContactProps> = ({ onNotify }) => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.4, delay: 0.3 }}
-            className="p-5 rounded-2xl border border-white/5 bg-bg-card flex items-center justify-around"
+            className="p-3.5 min-[360px]:p-5 rounded-2xl border border-white/5 bg-bg-card flex items-center justify-around"
           >
             <a
               href={profileData.linkedin}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 text-sm font-mono text-text-muted hover:text-cyan transition-colors"
+              className="flex items-center gap-1.5 sm:gap-2 text-xs sm:text-sm font-mono text-text-muted hover:text-cyan transition-colors"
             >
               <Linkedin className="w-4 h-4 text-cyan" />
               <span>LinkedIn</span>
@@ -191,7 +191,7 @@ export const Contact: React.FC<ContactProps> = ({ onNotify }) => {
               href={profileData.github}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 text-sm font-mono text-text-muted hover:text-cyan transition-colors"
+              className="flex items-center gap-1.5 sm:gap-2 text-xs sm:text-sm font-mono text-text-muted hover:text-cyan transition-colors"
             >
               <Github className="w-4 h-4 text-cyan" />
               <span>GitHub</span>

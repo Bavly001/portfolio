@@ -82,7 +82,7 @@ export const Navbar: React.FC = () => {
             href="./Bavly-Ashraf-Resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full border border-cyan/40 bg-cyan/[0.08] backdrop-blur-xl font-mono text-xs font-semibold text-cyan hover:border-cyan hover:bg-cyan/20 hover:shadow-[0_0_18px_rgba(6,182,212,0.35)] transition-all duration-300 shadow-lg shadow-black/80"
+            className="hidden min-[400px]:inline-flex items-center gap-1.5 px-3.5 sm:px-4 py-1.5 rounded-full border border-cyan/40 bg-cyan/[0.08] backdrop-blur-xl font-mono text-xs font-semibold text-cyan hover:border-cyan hover:bg-cyan/20 hover:shadow-[0_0_18px_rgba(6,182,212,0.35)] transition-all duration-300 shadow-lg shadow-black/80"
           >
             <FileText className="w-3.5 h-3.5" />
             <span>Resume</span>
