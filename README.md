@@ -60,6 +60,9 @@ npm run preview
 
 ```
 portfolio/
+├── .github/
+│   └── workflows/
+│       └── deploy.yml          # Automated GitHub Pages CI/CD workflow
 ├── public/
 │   ├── favicon.svg             # Custom minimalist cyan/obsidian SVG favicon
 │   └── Bavly-Ashraf-Resume.pdf # Printable PDF resume
@@ -94,10 +97,13 @@ portfolio/
 
 ## 🌐 Deployment
 
-The project is built with relative asset links (`base: './'`), so the production build (`dist/`) can be deployed anywhere effortlessly:
+### GitHub Pages (Automated via GitHub Actions)
+1. In your GitHub repository, go to **Settings** → **Pages**.
+2. Under **Build and deployment** → **Source**, select **GitHub Actions**.
+3. Every push to `main` automatically runs the workflow in `.github/workflows/deploy.yml`, builds the production bundle, and deploys it with zero downtime.
 
-- **Vercel / Netlify:** Import the GitHub repository; the framework preset will automatically detect Vite and run `npm run build` with output directory `dist`.
-- **GitHub Pages:** Run `npm run build` and deploy the generated `dist` folder directly or via your preferred deployment method.
+### Vercel / Netlify
+Import the repository directly. Vercel automatically detects Vite and builds to `dist/`.
 
 ---
 
