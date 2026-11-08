@@ -112,6 +112,68 @@ export const experiencesData: Experience[] = [
 
 export const projectsData: Project[] = [
   {
+    id: "kitcheniano-dashboard",
+    title: "Kitcheniano — Multi-Tenant Kitchen Operations Dashboard",
+    tagline: "Enterprise multi-tenant kitchen management & real-time inventory platform built with Next.js 14, NestJS 10, and TiDB Cloud MySQL.",
+    category: "Full-Stack Platform",
+    badgeText: "Microservice Ecosystem • Next.js 14 & NestJS",
+    featured: true,
+    description: "Architected an enterprise multi-tenant restaurant operations platform featuring strict tenant data isolation, FEFO automated stock deduction, real-time SSE kitchen order dispatching, and Backblaze B2 S3 storage. Part of a distributed microservices ecosystem synchronized with the customer storefront.",
+    longDescription: "Kitcheniano Dashboard is the mission-critical kitchen operations core of a distributed restaurant microservices ecosystem. Decoupled from public customer storefronts, it empowers kitchen managers and administrative staff to monitor real-time incoming orders, track ingredient inventory via First-Expired, First-Out (FEFO) heuristics, reconcile multi-tenant financial ledgers, and manage menu items with cloud image storage. Backed by NestJS 10, TypeORM, and TiDB Cloud Serverless MySQL with strict organizationId relational partitioning.",
+    features: [
+      "Microservices Architecture: Decoupled operations hub synchronized with the customer storefront via SSE bridges and a shared TiDB Cloud MySQL database",
+      "Strict Multi-Tenant Isolation: Complete relational data partitioning via indexed organizationId foreign keys and NestJS TenantGuard middleware",
+      "Real-Time Kitchen Dispatch: Server-Sent Events (SSE) push live order updates, kitchen status changes, and audio alert chimes to kitchen displays",
+      "FEFO Stock Intelligence: Non-negative automated batch inventory deduction prioritizing earliest expiring ingredients with low-stock warnings",
+      "Order Lifecycle & Financials: Full pipeline management (Received, In Kitchen, Ready, Out for Delivery, Completed) with discounts and P&L ledgers",
+      "Cloud Object Storage: Backblaze B2 S3 integration via AWS SDK v3 with pre-signed upload URLs and multi-region image delivery",
+      "Production Containerization: Multi-stage Dockerized deployment with NestJS hosted on Render and Next.js 14 Standalone hosted on Vercel"
+    ],
+    technologies: ["Next.js 14", "TypeScript", "NestJS 10", "MySQL (TiDB Cloud)", "TypeORM", "Tailwind CSS", "TanStack Query", "Zustand", "SSE", "Backblaze B2 S3", "Docker"],
+    metrics: "Production Deployed • Vercel + Render + TiDB Cloud",
+    liveUrl: "https://kitcheniano-dashboard-fe.vercel.app/",
+    pipelineTitle: "Kitchen Operations Microservice Pipeline",
+    pipelineSubtitle: "Dashboard to Shared Cloud Data Layer",
+    architectureFlow: [
+      { step: "01", title: "Next.js 14 App", desc: "Zustand auth, TanStack Query cache, SSE live listeners & Tailwind UI" },
+      { step: "02", title: "NestJS Core API", desc: "JWT & TenantGuard validation, TypeORM modules & event emitters" },
+      { step: "03", title: "FEFO Inventory", desc: "Automated batch deductions, low-stock threshold triggers & audit logs" },
+      { step: "04", title: "Shared TiDB Cloud", desc: "Multi-tenant MySQL partitioned database with TLS 1.2 connection pools" },
+    ]
+  },
+  {
+    id: "kitcheniano-client",
+    title: "Kitcheniano — Customer Storefront & Live Order Tracker",
+    tagline: "High-performance customer-facing food ordering web application with live SSE order tracking, Express microservice, and instant checkout.",
+    category: "Full-Stack Platform",
+    badgeText: "Microservice Ecosystem • Next.js 14 & Express",
+    featured: true,
+    description: "Built a responsive customer ordering experience with real-time SSE order tracking, dynamic cart & checkout, customer authentication, and seamless microservice synchronization with the Kitcheniano Operations Dashboard.",
+    longDescription: "Kitcheniano Customer Storefront serves as the consumer-facing gateway of the Kitcheniano microservices ecosystem. It operates independently as a decoupled Next.js 14 frontend and Express 4 microservice, enabling customers to browse live restaurant menus, customize dishes, place delivery or pickup orders, and watch live order status transitions in real time via Server-Sent Events. Seamlessly synchronized with the Kitcheniano Operations Dashboard via shared TiDB Cloud MySQL and backend notification bridges.",
+    features: [
+      "Decoupled Microservice Design: Lightweight Express REST microservice bridging customer orders directly into kitchen operations",
+      "Live Order Progress Tracking: Real-time visual timeline updated instantly via Server-Sent Events (SSE) and polling fallback",
+      "Dynamic Cart & Instant Checkout: Responsive cart drawer, address validation, phone formatting, and flexible order notes",
+      "Customer Identity & Order History: Secure JWT authentication with bcrypt password hashing and past order lookup",
+      "Cross-Service Image Optimization: Dynamic remote image resolution from Backblaze B2 S3 and Render CDN",
+      "Optimistic UI & State Resilience: Persistent cart and auth state with responsive mobile-first culinary design system",
+      "Production Deployed: Zero-latency edge deployment on Vercel with Express backend hosted on Render"
+    ],
+    technologies: ["Next.js 14", "TypeScript", "Express.js", "Node.js", "MySQL (TiDB Cloud)", "Tailwind CSS", "Zustand", "SSE", "JWT / bcrypt", "Vercel"],
+    metrics: "Production Deployed • Vercel + Render + Open Source",
+    githubUrl: "https://github.com/Bavly001/kitcheniano-client-FE",
+    githubBackendUrl: "https://github.com/Bavly001/kitcheniano-client-BE",
+    liveUrl: "https://kitcheniano-client-fe.vercel.app/",
+    pipelineTitle: "Storefront to Kitchen Microservice Flow",
+    pipelineSubtitle: "Customer Order to Kitchen Prep",
+    architectureFlow: [
+      { step: "01", title: "Customer Storefront", desc: "Next.js 14 responsive menu, interactive cart drawer & guest/user checkout" },
+      { step: "02", title: "Express Service", desc: "Lightweight API validating orders, hashing auth credentials & managing sessions" },
+      { step: "03", title: "Shared Data Layer", desc: "Synchronized orders, clients, and menu records on TiDB Cloud MySQL" },
+      { step: "04", title: "Live SSE Dispatch", desc: "Real-time kitchen broadcast notifying kitchen staff and customer tracker" },
+    ]
+  },
+  {
     id: "doit-todolist",
     title: "Doit — Full-Stack Productivity & Task Platform",
     tagline: "Modern production-grade task management system with React 18, Express 4 REST API, and TiDB Cloud Serverless MySQL.",

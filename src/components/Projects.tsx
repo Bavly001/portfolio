@@ -7,6 +7,8 @@ import { Project } from '../types/portfolio'
 
 export const Projects: React.FC = () => {
   const featuredProjects = [
+    projectsData.find((p) => p.id === 'kitcheniano-dashboard')!,
+    projectsData.find((p) => p.id === 'kitcheniano-client')!,
     projectsData.find((p) => p.id === 'doit-todolist')!,
     projectsData.find((p) => p.id === 'facetcher')!,
   ].filter(Boolean)
@@ -31,7 +33,7 @@ export const Projects: React.FC = () => {
             Selected <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-bright to-indigo-light">Projects</span>
           </h2>
           <p className="mt-3 text-xs sm:text-sm font-mono text-text-dim max-w-md mx-auto">
-            Full-stack cloud applications and deep-learning system architectures.
+            Full-stack microservices, cloud applications, and deep-learning systems.
           </p>
         </motion.div>
 
