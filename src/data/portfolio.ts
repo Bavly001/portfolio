@@ -174,6 +174,36 @@ export const projectsData: Project[] = [
     ]
   },
   {
+    id: "filmate",
+    title: "Filmate — Smart Cinematic Discovery & Mood Assistant",
+    tagline: "Intelligent cinematic discovery platform and interactive assistant matching movies and TV shows to your exact mood.",
+    category: "Full-Stack Platform",
+    badgeText: "Smart Assistant • Next.js 14 & TanStack Query",
+    featured: true,
+    description: "Architected a modern cinematic discovery web application featuring Filmate Mate—an interactive smart assistant that guides users through mood stacks, company, and runtime preferences to eliminate decision paralysis.",
+    longDescription: "Filmate is an intelligent cinematic platform engineered to solve choice fatigue and endless scrolling. At its heart is Filmate Mate, an interactive smart questionnaire assistant that tailors movie and TV series recommendations based on priority mood stacks (e.g. Laugh Out Loud, Edge-of-Seat Thrills, Mind-Bending Sci-Fi), company/occasion (Solo, Date Night, Family, Friends), era filters, and runtime limits. Integrated with live TMDB catalogs via TanStack Query v5, instant keyboard-accessible modal search, custom smooth carousel shelves, and responsive cinematic detail views.",
+    features: [
+      "Smart Mate Assistant: Interactive guided questionnaire pinpointing the ideal film or TV show matching current mood, occasion, and runtime",
+      "Adaptive Recommendation Discovery: Dynamic mood prioritization that automatically broadens niche filter combinations to guarantee high-relevance recommendations",
+      "Universal Instant Search: Fast keyboard-accessible (ESC / Enter) modal search overlay with catalog deep-linking and zero background scroll chaining",
+      "Comprehensive Live Catalogs: Trending daily/weekly feeds, categorized shelves (Now Playing, Top Rated, Upcoming), and paginated multi-genre exploration",
+      "Modern Frontend Architecture: Built with Next.js 14 App Router, TypeScript, Tailwind CSS, Zustand, and TanStack Query v5 caching",
+      "Production Deployed: Live on Vercel with responsive mobile-first cinematic UI and dark-mode aesthetic"
+    ],
+    technologies: ["Next.js 14", "TypeScript", "TanStack Query", "Zustand", "Tailwind CSS", "TMDB API", "Framer Motion", "Vercel"],
+    metrics: "Production Deployed • Vercel + Live TMDB Integration",
+    githubUrl: "https://github.com/Bavly001/filmate",
+    liveUrl: "https://filmate-assistant.vercel.app",
+    pipelineTitle: "Smart Mood Recommendation Flow",
+    pipelineSubtitle: "Mood Questionnaire to Curated Title",
+    architectureFlow: [
+      { step: "01", title: "Mood Questionnaire", desc: "Interactive prompt gathering mood stack, company, era, and runtime constraints" },
+      { step: "02", title: "Adaptive Discovery", desc: "Smart filtering algorithms scoring TMDB catalogs against multi-variable mood priorities" },
+      { step: "03", title: "TanStack Query", desc: "Direct client API layer with automatic caching, pagination, and debounce" },
+      { step: "04", title: "Cinematic Showcase", desc: "Hero presentation with trailer previews, cast highlights, and one-click re-roll" },
+    ]
+  },
+  {
     id: "doit-todolist",
     title: "Doit — Full-Stack Productivity & Task Platform",
     tagline: "Modern production-grade task management system with React 18, Express 4 REST API, and TiDB Cloud Serverless MySQL.",

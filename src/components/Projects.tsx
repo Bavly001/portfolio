@@ -9,6 +9,7 @@ export const Projects: React.FC = () => {
   const featuredProjects = [
     projectsData.find((p) => p.id === 'kitcheniano-dashboard')!,
     projectsData.find((p) => p.id === 'kitcheniano-client')!,
+    projectsData.find((p) => p.id === 'filmate')!,
     projectsData.find((p) => p.id === 'doit-todolist')!,
     projectsData.find((p) => p.id === 'facetcher')!,
   ].filter(Boolean)
